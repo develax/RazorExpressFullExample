@@ -1,0 +1,21 @@
+@{
+    var model = {
+        header: "Layouts",
+        content: 
+        `
+            <p>
+            Most web apps have a common layout that provides the user with a consistent experience as they navigate from page to page. The layout typically includes common user interface elements such as the app header, navigation or menu elements, and footer.
+            Common HTML structures such as scripts and stylesheets are also frequently used by many pages within an app. All of these shared elements may be defined in a layout file, which can then be referenced by any view used within the app. Layouts reduce duplicate code in views.
+            </p>
+            <p>
+            For example, the current view uses <i>"_layout.raz"</i> although you can't see it specified in this particular view because the <i>"_viewStart.raz"</i> does this job for every view.
+            </p>
+            <p>
+            By convention, the default layout is named <i>"_layout.raz"</i>. The layout defines a top level template for views in the app. 
+            Apps don't require a layout. Apps can define more than one layout, with different views specifying different layouts. 
+            Also a layout can have anther layout and so forth which means that layouts can be nested (see an example <a href="/nested-layouts">here</a>).
+            </p>
+        `
+    }
+}
+@Html.partial("_collapsibleBlock", model)

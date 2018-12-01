@@ -1,0 +1,20 @@
+@{
+    Html.layout = "_layoutGreen";
+    Model.title = "Nested layouts";
+    
+    Model.viewname = "/nested-layouts/index.raz";
+}
+
+<div>
+    @Html.partial("_header")
+    <div class="desc">
+        Layouts can be nested an example of which you can see here: the "Index.raz" view specifies a layout by setting <code>Html.layout</code> property:
+        <pre>Html.layout = "_layoutGreen";</pre>
+        which overrides the <code>Html.layout</code> propety set by the "_viewStart.raz".
+        The "_layoutGreen" specifies another layout "_layout". As a result you get your "Index.raz" view is put into "_layoutGreen.raz" and "_layoutGreen.raz" is put into "_layout.raz".
+    </div>
+</div>
+@if(Html.__dbg){
+    Html.partial("_collapsibleBlock", { header: "Current view template markup", description: Html.__dbg.viewName, code: Html.__dbg.template });
+}
+@Html.partial("_back")

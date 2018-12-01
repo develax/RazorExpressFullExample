@@ -1,0 +1,11 @@
+@{
+    Html.layout = "_layout";
+    var layoutDescription = "_layoutGreen";
+}
+
+<div class="layout">
+    <span class="layout-label bg-green">@layoutDescription</span>
+    <div class="layout-content">
+        @Html.body()
+    </div>
+</div>

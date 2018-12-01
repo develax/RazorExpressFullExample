@@ -1,0 +1,30 @@
+{
+  "name": "razorexpressfullexample",
+  "version": "1.0.0",
+  "description": "This example of Node.js web-server includes all the features Razor-Express has.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevelAx/RazorExpressFullExample.git"
+  },
+  "keywords": [
+    "razor-express",
+    "example",
+    "nodejs",
+    "express",
+    "layout",
+    "partial",
+    "body",
+    "section"
+  ],
+  "author": "Sergey F.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "raz": "0.0.39"
+  },
+  "devDependencies": {}
+}

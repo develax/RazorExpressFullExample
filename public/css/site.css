@@ -1,0 +1,67 @@
+body{
+    font-size: 16px;
+    font-family: Segoe UI, SegoeUI, Segoe WP, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.path{
+    color: #8e8e8e;
+}
+
+code, pre, .code{
+    background-color: #f5f5f5;
+    padding: 2px 5px 3px 5px;
+    margin: 6px 0;
+}
+
+.code{
+    background-color: white;
+}
+
+.content{
+    padding: 10px;
+    background-color: white;
+}
+
+.content > p:first-child, .content > p:last-child {
+    margin: 0;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.bg-blue{
+    background-color: lightcyan;
+}
+
+.bg-green{
+    background-color: lightgreen;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+
+.layout{
+    border: 1px solid black;
+    margin: 0px;
+    box-shadow: 5px 10px #a5a5a5;
+    background: #f9f9f9;
+}
+
+.layout-label{
+    margin: -1px;
+    padding: 0 2px 1px;
+    border: 1px solid black;
+    /* background-color: gainsboro; */
+}
+
+.layout-content{
+    padding: 18px;
+}
+
+.desc{
+    margin-bottom: 10px;
+}
+

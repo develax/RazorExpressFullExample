@@ -1,0 +1,46 @@
+@{
+    Model.title = "Razor-Express comprehensive examples";
+    Model.description = "In this project, you can see the usage of all the Razor functions implemented to date.";
+    Model.viewname = "index.raz";
+    
+    const groupper = (result, val) => {
+        var key = val.group;
+
+        if (!result[key]) 
+            result[key] = [];
+
+        result[key].push(val);
+        return result;
+    };
+
+    var grouped = Model.links.reduce(groupper, {});
+}
+
+<div>
+    @Html.partial("_header")
+    <div>
+        @Html.partial("./descriptors/_layouts")
+        @Html.partial("./descriptors/_partialViews")
+        @Html.partial("./descriptors/_sections")
+    </div>
+    <hr />
+    <a name="live-examples"></a>
+    <h2>Live examples</h2>
+    <ul>
+        @for(var name in grouped){
+            var group = grouped[name];
+            <li><h3>@name</h3></li>
+            <ul>
+                @for(var i = 0; i < group.length; i++){
+                    var link = group[i];
+                    <li>
+                        <a href="@link.url">@link.name</a>
+                    </li>
+                }
+            </ul>
+        }
+    </ul>
+</div>
+@if(Html.__dbg){
+    Html.partial("_collapsibleBlock", { header: "Current view template markup", description: Html.__dbg.viewName, code: Html.__dbg.template });
+}

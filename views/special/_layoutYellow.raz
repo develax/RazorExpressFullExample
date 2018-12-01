@@ -1,0 +1,21 @@
+@{
+    var layoutDescription = "/special/_layoutYellow";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <title>@Model.title</title>
+</head>
+<body class="bg-yellow">
+    <div class="layout">
+        <span class="layout-label bg-yellow">@layoutDescription</span>
+        <div class="layout-content">
+            @Html.body()
+        </div>
+    </div>
+</body>
+</html>

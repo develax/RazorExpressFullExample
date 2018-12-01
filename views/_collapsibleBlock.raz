@@ -1,0 +1,29 @@
+@{
+    var blockId = ViewData.blockId || 0;
+    ViewData.blockId = blockId + 1;
+}
+
+<br />
+
+<div class="template">
+    <div class="wrap-collabsible">
+        <input id="collapsible-@blockId" class="toggle" type="checkbox">
+        <label for="collapsible-@blockId" class="lbl-toggle pseudo-header">
+            @Model.header
+        </label>
+        <div class="collapsible-content">
+            <div class="content-inner content">
+                @if(Model.content){
+                    Html.raw(Model.content);
+                }
+                else{
+                    <pre class="code">@Model.code</pre>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles{
+    <link href="/css/collapsible.css" rel="stylesheet" />
+}

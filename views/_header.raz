@@ -1,0 +1,8 @@
+<strong class="path">View: @Model.viewname</strong>
+<hr/>
+<h1>@Model.title</h1>
+@if(Model.description){
+    <i>@Model.description</i>
+    <br />
+}
+<hr />

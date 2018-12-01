@@ -1,0 +1,35 @@
+@{
+    var model = {
+        header: "Partial views",
+        content: 
+        `
+            A partial view is a Razor markup file (.raz) that renders HTML output within another markup file's rendered output.
+            <br/>
+            Partial views are an effective way to:
+            <ul>
+                <li>
+                    Break up large markup files into smaller components.
+                </li>
+                <li>
+                    Reduce the duplication of common markup content across markup files.
+                </li>
+            </ul>
+            Partial views shouldn't be used to maintain common layout elements. Common layout elements should be specified in <a href="#layouts">Layouts</a>.
+            Partial view file names often begin with an underscore (<code>_</code>). This naming convention isn't required, but it helps to visually differentiate 
+            partial views from views and pages.
+            Examples of use of partial views like these
+    <pre>
+    @Html.partial("_header")
+    ...
+    @Html.partial("_back")</pre>
+            can be found in every 'Index.raz' file throughout this project examples.
+
+            <h4>Partial views search</h4>
+            When a partial view is referenced by name without any path, search starts from the same directory where the view (which is trying to render it) 
+            is located. If this fails the search moves up to the parent directories until the views root directory is reached.
+        `
+    }
+}
+@Html.partial("_collapsibleBlock", model)
+
+

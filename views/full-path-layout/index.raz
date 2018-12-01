@@ -1,0 +1,19 @@
+@{
+    Html.layout = "../special/_layoutYellow";
+    Model.title = "Full path layout";
+    Model.viewname = "/full-path-layout/index.raz";
+}
+
+<div>
+    @Html.partial("_header")
+    <div class="desc">
+        The layout specified can use a full path (this one specifies '@Html.layout') 
+        or a partial name (example: '_layout'). 
+        When a partial name is provided, the Razor view engine will search for the layout file using its standard discovery process. 
+        This discovery process is identical to the one used to discover partial views.
+    </div>
+</div>
+@if(Html.__dbg){
+    Html.partial("_collapsibleBlock", { header: "Current view template markup", description: Html.__dbg.viewName, code: Html.__dbg.template });
+}
+@Html.partial("_back")

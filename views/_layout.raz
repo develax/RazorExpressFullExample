@@ -1,0 +1,22 @@
+@{
+    var layoutDescription = "_layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/site.css" rel="stylesheet" />
+    @Html.section("Styles")
+    <title>@Model.title</title>
+</head>
+<body class="bg-blue">
+    <div class="layout">
+        <span class="layout-label bg-blue">@layoutDescription</span>
+        <div class="layout-content">
+            @Html.body()
+        </div>
+    </div>
+</body>
+</html>
