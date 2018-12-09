@@ -28,22 +28,15 @@
             <div>
                 <strong>NOTE:</strong>
                 In <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout?view=aspnetcore-2.1#sections" target="_blank">ASP.NET MVC Razor</a> only immediate layout page can render a section and they cannot be referenced from partial views.
-                In the current implementation of Razor syntax we don't have this limitation. I can't see anything wrong with having some specific 
-                script or style in some partial view. Since partial views can be rendered on a page more than once, each its section is rendered only once.
-                Also, you can have different sections defined in different files (views) with the same names. Then <code>@Html.section</code> will render
+                In the current implementation of Razor syntax we don't have this limitation. 
+                I can't see anything wrong with having some specific script or style in some partial view to be placed in a section. 
+                Since partial views can be rendered on a page more than once, each its section is rendered only once.
+                Also, you can have different sections defined in different files (views) with the same name. Then <code>@Html.section</code> will render
                 all these sections in one specific place. Of course, you should take into account that the order in which the sections will be rendered 
-                corresponds to <b>the rendering order of views, partial views, and layouts</b>.
+                corresponds to <b>the rendering order of the views, partial views, and layouts</b>. 
+                Sections can be defined and rendered even within the same (one) view, in this case the order is also important: definition must go before the reference.
             </div>
         `
     }
 }
 @Html.partial("_collapsibleBlock", model)
-
-
-<div class="descriptor">
-    <a name="sections"></a>
-    <h2></h2>
-    <div>
-
-    </div>
-</div>
