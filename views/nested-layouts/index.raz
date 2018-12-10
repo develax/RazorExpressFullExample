@@ -1,5 +1,4 @@
 @{
-    Html.layout = "_layoutGreen";
     Model.title = "Nested layouts";
     Model.viewname = "/nested-layouts/index.raz";
 }
