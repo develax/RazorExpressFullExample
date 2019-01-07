@@ -1,11 +1,12 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const raz = require("raz");
-const port = 1337;
 
-// Register Razor view engine for Express.
-raz.register(app);
+// Create & register Razor-Express view engine for Express.
+const raz = require("raz");
+raz.setup(app, { register: true }); 
+
+const port = 1337;
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
@@ -32,6 +33,5 @@ raz.handleErrors(app);
 app.listen(port, () => {
     console.log("Server is up on port " + port);
 }).on("error", (err) => {
-    // https://stackoverflow.com/a/50325607/1844247
-    console.error("\x1b[5m", "\x1b[31m", "\x1b[43m","[!] Error starting server: " + err.message, "\x1b[0m");
+    console.error("[!] Error starting server: " + err.message);
 });
