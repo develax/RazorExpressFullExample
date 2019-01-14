@@ -4,7 +4,7 @@ const app = express();
 
 // Create & register Razor-Express view engine for Express.
 const raz = require("raz");
-raz.setup(app, { register: true }); 
+raz.register(app); 
 
 const port = 1337;
 app.use(express.static("public"));
