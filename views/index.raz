@@ -42,5 +42,5 @@
     </ul>
 </div>
 @if(Html.__dbg){
-    Html.partial("_collapsibleBlock", { header: "Current view template markup", description: Html.__dbg.viewName, code: Html.__dbg.template });
+    <div>Html.partial("_collapsibleBlock", { header: "Current view template markup", description: Html.__dbg.viewName, code: Html.__dbg.template })<div>
 }
